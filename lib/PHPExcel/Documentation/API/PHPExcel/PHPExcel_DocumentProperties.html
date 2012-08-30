@@ -14,7 +14,7 @@
     <td class="header_menu">
         
                                     
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      		  [ <a href="../classtrees_PHPExcel.html" class="menu">class tree: PHPExcel</a> ]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              		  [ <a href="../classtrees_PHPExcel.html" class="menu">class tree: PHPExcel</a> ]
 		  [ <a href="../elementindex_PHPExcel.html" class="menu">index: PHPExcel</a> ]
 		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
     </td>
@@ -36,15 +36,17 @@
               <a href="../li_PHPExcel_CachedObjectStorage.html">PHPExcel_CachedObjectStorage</a><br />
               <a href="../li_PHPExcel_Calculation.html">PHPExcel_Calculation</a><br />
               <a href="../li_PHPExcel_Cell.html">PHPExcel_Cell</a><br />
+              <a href="../li_PHPExcel_Chart.html">PHPExcel_Chart</a><br />
+              <a href="../li_PHPExcel_Chart_Renderer.html">PHPExcel_Chart_Renderer</a><br />
               <a href="../li_PHPExcel_Reader.html">PHPExcel_Reader</a><br />
               <a href="../li_PHPExcel_Reader_Excel5.html">PHPExcel_Reader_Excel5</a><br />
               <a href="../li_PHPExcel_Reader_Excel2007.html">PHPExcel_Reader_Excel2007</a><br />
               <a href="../li_PHPExcel_RichText.html">PHPExcel_RichText</a><br />
               <a href="../li_PHPExcel_Settings.html">PHPExcel_Settings</a><br />
               <a href="../li_PHPExcel_Shared.html">PHPExcel_Shared</a><br />
-              <a href="../li_PHPExcel_Shared_Best_Fit.html">PHPExcel_Shared_Best_Fit</a><br />
               <a href="../li_PHPExcel_Shared_Escher.html">PHPExcel_Shared_Escher</a><br />
               <a href="../li_PHPExcel_Shared_OLE.html">PHPExcel_Shared_OLE</a><br />
+              <a href="../li_PHPExcel_Shared_Trend.html">PHPExcel_Shared_Trend</a><br />
               <a href="../li_PHPExcel_Shared_ZipArchive.html">PHPExcel_Shared_ZipArchive</a><br />
               <a href="../li_PHPExcel_Style.html">PHPExcel_Style</a><br />
               <a href="../li_PHPExcel_Worksheet.html">PHPExcel_Worksheet</a><br />
@@ -68,8 +70,6 @@
 			<a href="../PHPExcel/_PHPExcel---Shared---PDF---fonts---arialunicid0.php.html">		arialunicid0.php
 		</a><br>
 			<a href="../PHPExcel/_PHPExcel---Autoloader.php.html">		Autoloader.php
-		</a><br>
-			<a href="../PHPExcel/_PHPExcel---CachedObjectStorageFactory.php.html">		CachedObjectStorageFactory.php
 		</a><br>
 			<a href="../PHPExcel/_PHPExcel---Shared---PDF---fonts---chinese.php.html">		chinese.php
 		</a><br>
@@ -221,8 +221,6 @@
 		</a><br>
 			<a href="../PHPExcel/_PHPExcel---Shared---PDF---fonts---timesi.php.html">		timesi.php
 		</a><br>
-			<a href="../PHPExcel/_PHPExcel---Shared---trend---trendClass.php.html">		trendClass.php
-		</a><br>
 			<a href="../PHPExcel/_PHPExcel---Shared---PDF---fonts---uni2cid_ac15.php.html">		uni2cid_ac15.php
 		</a><br>
 			<a href="../PHPExcel/_PHPExcel---Shared---PDF---fonts---uni2cid_ag15.php.html">		uni2cid_ag15.php
@@ -252,7 +250,6 @@
 	    		<a href="../PHPExcel/PclZip.html">PclZip</a><br />
 	    		<a href="../PHPExcel/PHPExcel.html">PHPExcel</a><br />
 	    		<a href="../PHPExcel/PHPExcel_Autoloader.html">PHPExcel_Autoloader</a><br />
-	    		<a href="../PHPExcel/PHPExcel_CachedObjectStorageFactory.html">PHPExcel_CachedObjectStorageFactory</a><br />
 	    		<a href="../PHPExcel/PHPExcel_Comment.html">PHPExcel_Comment</a><br />
 	    		<a href="../PHPExcel/PHPExcel_DocumentProperties.html">PHPExcel_DocumentProperties</a><br />
 	    		<a href="../PHPExcel/PHPExcel_DocumentSecurity.html">PHPExcel_DocumentSecurity</a><br />
@@ -262,7 +259,6 @@
 	    		<a href="../PHPExcel/PHPExcel_ReferenceHelper.html">PHPExcel_ReferenceHelper</a><br />
 	    		<a href="../PHPExcel/PHPExcel_WorksheetIterator.html">PHPExcel_WorksheetIterator</a><br />
 	    		<a href="../PHPExcel/TestMatrix.html">TestMatrix</a><br />
-	    		<a href="../PHPExcel/trendClass.html">trendClass</a><br />
 	  </div>
                 </td>
     <td>
@@ -290,7 +286,7 @@ Source Location: /PHPExcel/DocumentProperties.php<br /><br />
 
 <h4>Copyright:</h4>
 <ul>
-  <li>Copyright (c) 2006 - 2011 PHPExcel (http://www.codeplex.com/PHPExcel)</li>
+  <li>Copyright (c) 2006 - 2012 PHPExcel (http://www.codeplex.com/PHPExcel)</li>
 </ul>
         
 </td>
@@ -361,13 +357,13 @@ Source Location: /PHPExcel/DocumentProperties.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a36">36</a>]<br />
+[line 36]<br />
 PHPExcel_DocumentProperties<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><b>copyright:</b>&nbsp;&nbsp;</td><td>Copyright (c) 2006 - 2011 PHPExcel (http://www.codeplex.com/PHPExcel)</td>
+    <td><b>copyright:</b>&nbsp;&nbsp;</td><td>Copyright (c) 2006 - 2012 PHPExcel (http://www.codeplex.com/PHPExcel)</td>
   </tr>
 </table>
 </div>
@@ -381,7 +377,7 @@ PHPExcel_DocumentProperties<br /><br /><br /><br />
 <div class="tags">
   <hr />
 	<a name="methodconvertProperty"></a>
-	<h3>static method convertProperty <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a478">478</a>]</span></h3>
+	<h3>static method convertProperty <span class="smalllinenumber">[line 478]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -423,7 +419,7 @@ $propertyType)</code>
   </div>
   <hr />
 	<a name="methodconvertPropertyType"></a>
-	<h3>static method convertPropertyType <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a536">536</a>]</span></h3>
+	<h3>static method convertPropertyType <span class="smalllinenumber">[line 536]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -460,7 +456,7 @@ $propertyType)</code>
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a135">135</a>]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line 135]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -485,7 +481,7 @@ $propertyType)</code>
   </div>
   <hr />
 	<a name="methodgetCategory"></a>
-	<h3>method getCategory <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a328">328</a>]</span></h3>
+	<h3>method getCategory <span class="smalllinenumber">[line 328]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -510,7 +506,7 @@ $propertyType)</code>
   </div>
   <hr />
 	<a name="methodgetCompany"></a>
-	<h3>method getCompany <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a348">348</a>]</span></h3>
+	<h3>method getCompany <span class="smalllinenumber">[line 348]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -535,7 +531,7 @@ $propertyType)</code>
   </div>
   <hr />
 	<a name="methodgetCreated"></a>
-	<h3>method getCreated <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a188">188</a>]</span></h3>
+	<h3>method getCreated <span class="smalllinenumber">[line 188]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -560,7 +556,7 @@ $propertyType)</code>
   </div>
   <hr />
 	<a name="methodgetCreator"></a>
-	<h3>method getCreator <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a148">148</a>]</span></h3>
+	<h3>method getCreator <span class="smalllinenumber">[line 148]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -585,7 +581,7 @@ $propertyType)</code>
   </div>
   <hr />
 	<a name="methodgetCustomProperties"></a>
-	<h3>method getCustomProperties <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a388">388</a>]</span></h3>
+	<h3>method getCustomProperties <span class="smalllinenumber">[line 388]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -613,7 +609,7 @@ $propertyType)</code>
   </div>
   <hr />
 	<a name="methodgetCustomPropertyType"></a>
-	<h3>method getCustomPropertyType <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a421">421</a>]</span></h3>
+	<h3>method getCustomPropertyType <span class="smalllinenumber">[line 421]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -649,7 +645,7 @@ $propertyName)</code>
   </div>
   <hr />
 	<a name="methodgetCustomPropertyValue"></a>
-	<h3>method getCustomPropertyValue <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a408">408</a>]</span></h3>
+	<h3>method getCustomPropertyValue <span class="smalllinenumber">[line 408]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -685,7 +681,7 @@ $propertyName)</code>
   </div>
   <hr />
 	<a name="methodgetDescription"></a>
-	<h3>method getDescription <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a268">268</a>]</span></h3>
+	<h3>method getDescription <span class="smalllinenumber">[line 268]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -710,7 +706,7 @@ $propertyName)</code>
   </div>
   <hr />
 	<a name="methodgetKeywords"></a>
-	<h3>method getKeywords <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a308">308</a>]</span></h3>
+	<h3>method getKeywords <span class="smalllinenumber">[line 308]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -735,7 +731,7 @@ $propertyName)</code>
   </div>
   <hr />
 	<a name="methodgetLastModifiedBy"></a>
-	<h3>method getLastModifiedBy <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a168">168</a>]</span></h3>
+	<h3>method getLastModifiedBy <span class="smalllinenumber">[line 168]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -760,7 +756,7 @@ $propertyName)</code>
   </div>
   <hr />
 	<a name="methodgetManager"></a>
-	<h3>method getManager <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a368">368</a>]</span></h3>
+	<h3>method getManager <span class="smalllinenumber">[line 368]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -785,7 +781,7 @@ $propertyName)</code>
   </div>
   <hr />
 	<a name="methodgetModified"></a>
-	<h3>method getModified <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a218">218</a>]</span></h3>
+	<h3>method getModified <span class="smalllinenumber">[line 218]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -810,7 +806,7 @@ $propertyName)</code>
   </div>
   <hr />
 	<a name="methodgetSubject"></a>
-	<h3>method getSubject <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a288">288</a>]</span></h3>
+	<h3>method getSubject <span class="smalllinenumber">[line 288]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -835,7 +831,7 @@ $propertyName)</code>
   </div>
   <hr />
 	<a name="methodgetTitle"></a>
-	<h3>method getTitle <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a248">248</a>]</span></h3>
+	<h3>method getTitle <span class="smalllinenumber">[line 248]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -860,7 +856,7 @@ $propertyName)</code>
   </div>
   <hr />
 	<a name="methodisCustomPropertySet"></a>
-	<h3>method isCustomPropertySet <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a398">398</a>]</span></h3>
+	<h3>method isCustomPropertySet <span class="smalllinenumber">[line 398]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -896,7 +892,7 @@ $propertyName)</code>
   </div>
   <hr />
 	<a name="methodsetCategory"></a>
-	<h3>method setCategory <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a338">338</a>]</span></h3>
+	<h3>method setCategory <span class="smalllinenumber">[line 338]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -932,7 +928,7 @@ $pValue = ''])</code>
   </div>
   <hr />
 	<a name="methodsetCompany"></a>
-	<h3>method setCompany <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a358">358</a>]</span></h3>
+	<h3>method setCompany <span class="smalllinenumber">[line 358]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -968,7 +964,7 @@ $pValue = ''])</code>
   </div>
   <hr />
 	<a name="methodsetCreated"></a>
-	<h3>method setCreated <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a198">198</a>]</span></h3>
+	<h3>method setCreated <span class="smalllinenumber">[line 198]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1004,7 +1000,7 @@ $pValue = null])</code>
   </div>
   <hr />
 	<a name="methodsetCreator"></a>
-	<h3>method setCreator <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a158">158</a>]</span></h3>
+	<h3>method setCreator <span class="smalllinenumber">[line 158]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1040,7 +1036,7 @@ $pValue = ''])</code>
   </div>
   <hr />
 	<a name="methodsetCustomProperty"></a>
-	<h3>method setCustomProperty <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a441">441</a>]</span></h3>
+	<h3>method setCustomProperty <span class="smalllinenumber">[line 441]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1088,7 +1084,7 @@ $propertyType = NULL])</code>
   </div>
   <hr />
 	<a name="methodsetDescription"></a>
-	<h3>method setDescription <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a278">278</a>]</span></h3>
+	<h3>method setDescription <span class="smalllinenumber">[line 278]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1124,7 +1120,7 @@ $pValue = ''])</code>
   </div>
   <hr />
 	<a name="methodsetKeywords"></a>
-	<h3>method setKeywords <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a318">318</a>]</span></h3>
+	<h3>method setKeywords <span class="smalllinenumber">[line 318]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1160,7 +1156,7 @@ $pValue = ''])</code>
   </div>
   <hr />
 	<a name="methodsetLastModifiedBy"></a>
-	<h3>method setLastModifiedBy <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a178">178</a>]</span></h3>
+	<h3>method setLastModifiedBy <span class="smalllinenumber">[line 178]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1196,7 +1192,7 @@ $pValue = ''])</code>
   </div>
   <hr />
 	<a name="methodsetManager"></a>
-	<h3>method setManager <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a378">378</a>]</span></h3>
+	<h3>method setManager <span class="smalllinenumber">[line 378]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1232,7 +1228,7 @@ $pValue = ''])</code>
   </div>
   <hr />
 	<a name="methodsetModified"></a>
-	<h3>method setModified <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a228">228</a>]</span></h3>
+	<h3>method setModified <span class="smalllinenumber">[line 228]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1268,7 +1264,7 @@ $pValue = null])</code>
   </div>
   <hr />
 	<a name="methodsetSubject"></a>
-	<h3>method setSubject <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a298">298</a>]</span></h3>
+	<h3>method setSubject <span class="smalllinenumber">[line 298]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1304,7 +1300,7 @@ $pValue = ''])</code>
   </div>
   <hr />
 	<a name="methodsetTitle"></a>
-	<h3>method setTitle <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a258">258</a>]</span></h3>
+	<h3>method setTitle <span class="smalllinenumber">[line 258]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1340,7 +1336,7 @@ $pValue = ''])</code>
   </div>
   <hr />
 	<a name="method__clone"></a>
-	<h3>method __clone <span class="smalllinenumber">[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a467">467</a>]</span></h3>
+	<h3>method __clone <span class="smalllinenumber">[line 467]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1372,42 +1368,42 @@ $pValue = ''])</code>
 	<a name="constPROPERTY_TYPE_BOOLEAN"></a>
 	<p></p>
 	<h4>PROPERTY_TYPE_BOOLEAN = <span class="value">&nbsp;'b'</span></h4>
-	<p>[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a39">39</a>]</p>
+	<p>[line 39]</p>
   constants<br /><br />
   <br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 	<a name="constPROPERTY_TYPE_DATE"></a>
 	<p></p>
 	<h4>PROPERTY_TYPE_DATE = <span class="value">&nbsp;'d'</span></h4>
-	<p>[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a42">42</a>]</p>
+	<p>[line 42]</p>
   
   <br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 	<a name="constPROPERTY_TYPE_FLOAT"></a>
 	<p></p>
 	<h4>PROPERTY_TYPE_FLOAT = <span class="value">&nbsp;'f'</span></h4>
-	<p>[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a41">41</a>]</p>
+	<p>[line 41]</p>
   
   <br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 	<a name="constPROPERTY_TYPE_INTEGER"></a>
 	<p></p>
 	<h4>PROPERTY_TYPE_INTEGER = <span class="value">&nbsp;'i'</span></h4>
-	<p>[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a40">40</a>]</p>
+	<p>[line 40]</p>
   
   <br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 	<a name="constPROPERTY_TYPE_STRING"></a>
 	<p></p>
 	<h4>PROPERTY_TYPE_STRING = <span class="value">&nbsp;'s'</span></h4>
-	<p>[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a43">43</a>]</p>
+	<p>[line 43]</p>
   
   <br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 	<a name="constPROPERTY_TYPE_UNKNOWN"></a>
 	<p></p>
 	<h4>PROPERTY_TYPE_UNKNOWN = <span class="value">&nbsp;'u'</span></h4>
-	<p>[line <a href="../__filesource/fsource_PHPExcel__PHPExcelDocumentProperties.php.html#a44">44</a>]</p>
+	<p>[line 44]</p>
   
   <br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
@@ -1415,7 +1411,7 @@ $pValue = ''])</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 27 Feb 2011 16:30:13 -0800 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sat, 19 May 2012 14:33:55 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.4</a>
 	      </div>
       </td></tr></table>
     </td>

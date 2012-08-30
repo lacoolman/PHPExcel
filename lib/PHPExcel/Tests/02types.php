@@ -1,8 +1,8 @@
-﻿<?php
+<?php
 /**
  * PHPExcel
  *
- * Copyright (C) 2006 - 2011 PHPExcel
+ * Copyright (C) 2006 - 2012 PHPExcel
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -20,9 +20,9 @@
  *
  * @category   PHPExcel
  * @package    PHPExcel
- * @copyright  Copyright (c) 2006 - 2011 PHPExcel (http://www.codeplex.com/PHPExcel)
+ * @copyright  Copyright (c) 2006 - 2012 PHPExcel (http://www.codeplex.com/PHPExcel)
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
- * @version    1.7.6, 2011-02-27
+ * @version    1.7.7, 2012-05-19
  */
 
 /** Error reporting */
@@ -30,16 +30,16 @@ error_reporting(E_ALL);
 
 date_default_timezone_set('Europe/London');
 
-/** PHPExcel */
+/** Include PHPExcel */
 require_once '../Classes/PHPExcel.php';
 
 
 // Create new PHPExcel object
-echo date('H:i:s') . " Create new PHPExcel object\n";
+echo date('H:i:s') , " Create new PHPExcel object" , PHP_EOL;
 $objPHPExcel = new PHPExcel();
 
-// Set properties
-echo date('H:i:s') . " Set properties\n";
+// Set document properties
+echo date('H:i:s') , " Set document properties" , PHP_EOL;
 $objPHPExcel->getProperties()->setCreator("Maarten Balliauw")
 							 ->setLastModifiedBy("Maarten Balliauw")
 							 ->setTitle("Office 2007 XLSX Test Document")
@@ -49,12 +49,12 @@ $objPHPExcel->getProperties()->setCreator("Maarten Balliauw")
 							 ->setCategory("Test result file");
 
 // Set default font
-echo date('H:i:s') . " Set default font\n";
+echo date('H:i:s') , " Set default font" , PHP_EOL;
 $objPHPExcel->getDefaultStyle()->getFont()->setName('Arial');
 $objPHPExcel->getDefaultStyle()->getFont()->setSize(10);
 
 // Add some data, resembling some different data types
-echo date('H:i:s') . " Add some data\n";
+echo date('H:i:s') , " Add some data" , PHP_EOL;
 $objPHPExcel->getActiveSheet()->setCellValue('A1', 'String');
 $objPHPExcel->getActiveSheet()->setCellValue('B1', 'Simple');
 $objPHPExcel->getActiveSheet()->setCellValue('C1', 'PHPExcel');
@@ -87,8 +87,27 @@ $objPHPExcel->getActiveSheet()->setCellValue('A8', 'Boolean');
 $objPHPExcel->getActiveSheet()->setCellValue('B8', 'False');
 $objPHPExcel->getActiveSheet()->setCellValue('C8', false);
 
-// Rename sheet
-echo date('H:i:s') . " Rename sheet\n";
+$dateTimeNow = time();
+$objPHPExcel->getActiveSheet()->setCellValue('A9', 'Date/Time');
+$objPHPExcel->getActiveSheet()->setCellValue('B9', 'Date');
+$objPHPExcel->getActiveSheet()->setCellValue('C9', PHPExcel_Shared_Date::PHPToExcel( $dateTimeNow ));
+$objPHPExcel->getActiveSheet()->getStyle('C9')->getNumberFormat()->setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_DATE_YYYYMMDD2);
+
+$objPHPExcel->getActiveSheet()->setCellValue('A10', 'Date/Time');
+$objPHPExcel->getActiveSheet()->setCellValue('B10', 'Time');
+$objPHPExcel->getActiveSheet()->setCellValue('C10', PHPExcel_Shared_Date::PHPToExcel( $dateTimeNow ));
+$objPHPExcel->getActiveSheet()->getStyle('C10')->getNumberFormat()->setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_DATE_TIME4);
+
+$objPHPExcel->getActiveSheet()->setCellValue('A11', 'Date/Time');
+$objPHPExcel->getActiveSheet()->setCellValue('B11', 'Date and Time');
+$objPHPExcel->getActiveSheet()->setCellValue('C11', PHPExcel_Shared_Date::PHPToExcel( $dateTimeNow ));
+$objPHPExcel->getActiveSheet()->getStyle('C11')->getNumberFormat()->setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_DATE_DATETIME);
+
+$objPHPExcel->getActiveSheet()->getColumnDimension('B')->setAutoSize(true);
+$objPHPExcel->getActiveSheet()->getColumnDimension('C')->setAutoSize(true);
+
+// Rename worksheet
+echo date('H:i:s') , " Rename worksheet" , PHP_EOL;
 $objPHPExcel->getActiveSheet()->setTitle('Datatypes');
 
 
@@ -97,13 +116,20 @@ $objPHPExcel->setActiveSheetIndex(0);
 
 
 // Save Excel 2007 file
-echo date('H:i:s') . " Write to Excel2007 format\n";
+echo date('H:i:s') , " Write to Excel2007 format" , PHP_EOL;
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
 $objWriter->save(str_replace('.php', '.xlsx', __FILE__));
+echo date('H:i:s') , " File written to " , str_replace('.php', '.xlsx', __FILE__) , PHP_EOL;
+
+
+echo date('H:i:s') , " Reload workbook from saved file" , PHP_EOL;
+$objPHPExcel = PHPExcel_IOFactory::load(str_replace('.php', '.xlsx', __FILE__));
+
+var_dump($objPHPExcel->getActiveSheet()->toArray());
 
 
 // Echo memory peak usage
-echo date('H:i:s') . " Peak memory usage: " . (memory_get_peak_usage(true) / 1024 / 1024) . " MB\r\n";
+echo date('H:i:s') , " Peak memory usage: " , (memory_get_peak_usage(true) / 1024 / 1024) , " MB" , PHP_EOL;
 
 // Echo done
-echo date('H:i:s') . " Done writing file.\r\n";
+echo date('H:i:s') , " Done writing file" , PHP_EOL;

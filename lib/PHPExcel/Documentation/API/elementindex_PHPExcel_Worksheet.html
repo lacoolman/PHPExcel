@@ -13,7 +13,7 @@
   <tr>
     <td class="header_menu">
         
-                                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    
                                                                                                               		  [ <a href="classtrees_PHPExcel_Worksheet.html" class="menu">class tree: PHPExcel_Worksheet</a> ]
 		  [ <a href="elementindex_PHPExcel_Worksheet.html" class="menu">index: PHPExcel_Worksheet</a> ]
 		  	    [ <a href="elementindex.html" class="menu">all elements</a> ]
@@ -33,6 +33,8 @@
               <a href="li_PHPExcel_CachedObjectStorage.html">PHPExcel_CachedObjectStorage</a><br />
               <a href="li_PHPExcel_Calculation.html">PHPExcel_Calculation</a><br />
               <a href="li_PHPExcel_Cell.html">PHPExcel_Cell</a><br />
+              <a href="li_PHPExcel_Chart.html">PHPExcel_Chart</a><br />
+              <a href="li_PHPExcel_Chart_Renderer.html">PHPExcel_Chart_Renderer</a><br />
               <a href="li_PHPExcel_Reader.html">PHPExcel_Reader</a><br />
               <a href="li_PHPExcel_Reader_Excel5.html">PHPExcel_Reader_Excel5</a><br />
               <a href="li_PHPExcel_Reader_Excel2007.html">PHPExcel_Reader_Excel2007</a><br />
@@ -44,7 +46,7 @@
               <a href="li_Math_Stats.html">Math_Stats</a><br />
               <a href="li_PHPExcel_Shared_OLE.html">PHPExcel_Shared_OLE</a><br />
               <a href="li_com-tecnick-tcpdf.html">com-tecnick-tcpdf</a><br />
-              <a href="li_PHPExcel_Shared_Best_Fit.html">PHPExcel_Shared_Best_Fit</a><br />
+              <a href="li_PHPExcel_Shared_Trend.html">PHPExcel_Shared_Trend</a><br />
               <a href="li_PHPExcel_Shared_ZipArchive.html">PHPExcel_Shared_ZipArchive</a><br />
               <a href="li_PHPExcel_Style.html">PHPExcel_Style</a><br />
               <a href="li_PHPExcel_Worksheet.html">PHPExcel_Worksheet</a><br />
@@ -234,6 +236,8 @@
 	<div>
 		<h2>a</h2>
 		<dl>
+							<dt><b>addChart</b></dt>
+				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodaddChart">PHPExcel_Worksheet::addChart()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Add chart</dd>
 							<dt><b>addImage</b></dt>
 				<dd>in file HeaderFooter.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooter.html#methodaddImage">PHPExcel_Worksheet_HeaderFooter::addImage()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Add header/footer image</dd>
 							<dt><b>addPrintArea</b></dt>
@@ -266,6 +270,8 @@
 		<dl>
 							<dt><b>calculateColumnWidths</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodcalculateColumnWidths">PHPExcel_Worksheet::calculateColumnWidths()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Calculate widths for auto-size columns</dd>
+							<dt><b>calculateWorksheetDataDimension</b></dt>
+				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodcalculateWorksheetDataDimension">PHPExcel_Worksheet::calculateWorksheetDataDimension()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Calculate worksheet data dimension</dd>
 							<dt><b>calculateWorksheetDimension</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodcalculateWorksheetDimension">PHPExcel_Worksheet::calculateWorksheetDimension()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Calculate worksheet dimension</dd>
 							<dt><b>cellExists</b></dt>
@@ -279,9 +285,9 @@
 							<dt><b>copy</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodcopy">PHPExcel_Worksheet::copy()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Copy worksheet (!= clone!)</dd>
 							<dt><b>current</b></dt>
-				<dd>in file RowIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html#methodcurrent">PHPExcel_Worksheet_RowIterator::current()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Current PHPExcel_Worksheet_Row</dd>
-							<dt><b>current</b></dt>
 				<dd>in file CellIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_CellIterator.html#methodcurrent">PHPExcel_Worksheet_CellIterator::current()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Current PHPExcel_Cell</dd>
+							<dt><b>current</b></dt>
+				<dd>in file RowIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html#methodcurrent">PHPExcel_Worksheet_RowIterator::current()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return the current row in this worksheet</dd>
 							<dt><b>CellIterator.php</b></dt>
 				<dd>procedural page <a href="PHPExcel_Worksheet/_PHPExcel---Worksheet---CellIterator.php.html">CellIterator.php</a></dd>
 							<dt><b>ColumnDimension.php</b></dt>
@@ -297,7 +303,9 @@
 							<dt><b>dataValidationExists</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methoddataValidationExists">PHPExcel_Worksheet::dataValidationExists()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Data validation at a specific coordinate exists?</dd>
 							<dt><b>disconnectCells</b></dt>
-				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methoddisconnectCells">PHPExcel_Worksheet::disconnectCells()</a></dd>
+				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methoddisconnectCells">PHPExcel_Worksheet::disconnectCells()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Disconnect all cells from this PHPExcel_Worksheet object,</dd>
+							<dt><b>duplicateConditionalStyle</b></dt>
+				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodduplicateConditionalStyle">PHPExcel_Worksheet::duplicateConditionalStyle()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Duplicate conditional style to a range of cells</dd>
 							<dt><b>duplicateStyle</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodduplicateStyle">PHPExcel_Worksheet::duplicateStyle()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Duplicate cell style to a range of cells</dd>
 							<dt><b>duplicateStyleArray</b></dt>
@@ -341,9 +349,9 @@
 							<dt><b>getAlignWithMargins</b></dt>
 				<dd>in file HeaderFooter.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooter.html#methodgetAlignWithMargins">PHPExcel_Worksheet_HeaderFooter::getAlignWithMargins()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get AlignWithMargins</dd>
 							<dt><b>getAutoFilter</b></dt>
-				<dd>in file Protection.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_Protection.html#methodgetAutoFilter">PHPExcel_Worksheet_Protection::getAutoFilter()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get AutoFilter</dd>
-							<dt><b>getAutoFilter</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetAutoFilter">PHPExcel_Worksheet::getAutoFilter()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Autofilter Range</dd>
+							<dt><b>getAutoFilter</b></dt>
+				<dd>in file Protection.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_Protection.html#methodgetAutoFilter">PHPExcel_Worksheet_Protection::getAutoFilter()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get AutoFilter</dd>
 							<dt><b>getAutoSize</b></dt>
 				<dd>in file ColumnDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_ColumnDimension.html#methodgetAutoSize">PHPExcel_Worksheet_ColumnDimension::getAutoSize()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Auto Size</dd>
 							<dt><b>getBottom</b></dt>
@@ -360,6 +368,16 @@
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetCellCollection">PHPExcel_Worksheet::getCellCollection()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get collection of cells</dd>
 							<dt><b>getCellIterator</b></dt>
 				<dd>in file Row.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_Row.html#methodgetCellIterator">PHPExcel_Worksheet_Row::getCellIterator()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get cell iterator</dd>
+							<dt><b>getChartByIndex</b></dt>
+				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetChartByIndex">PHPExcel_Worksheet::getChartByIndex()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get a chart by its index position</dd>
+							<dt><b>getChartByName</b></dt>
+				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetChartByName">PHPExcel_Worksheet::getChartByName()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get a chart by name</dd>
+							<dt><b>getChartCollection</b></dt>
+				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetChartCollection">PHPExcel_Worksheet::getChartCollection()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get collection of charts</dd>
+							<dt><b>getChartCount</b></dt>
+				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetChartCount">PHPExcel_Worksheet::getChartCount()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return the count of charts on this worksheet</dd>
+							<dt><b>getChartNames</b></dt>
+				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetChartNames">PHPExcel_Worksheet::getChartNames()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return an array of the names of charts on this worksheet</dd>
 							<dt><b>getCollapsed</b></dt>
 				<dd>in file RowDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowDimension.html#methodgetCollapsed">PHPExcel_Worksheet_RowDimension::getCollapsed()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Collapsed</dd>
 							<dt><b>getCollapsed</b></dt>
@@ -439,25 +457,31 @@
 							<dt><b>getFreezePane</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetFreezePane">PHPExcel_Worksheet::getFreezePane()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Freeze Pane</dd>
 							<dt><b>getHashCode</b></dt>
-				<dd>in file HeaderFooterDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooterDrawing.html#methodgetHashCode">PHPExcel_Worksheet_HeaderFooterDrawing::getHashCode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get hash code</dd>
-							<dt><b>getHashCode</b></dt>
-				<dd>in file MemoryDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_MemoryDrawing.html#methodgetHashCode">PHPExcel_Worksheet_MemoryDrawing::getHashCode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get hash code</dd>
-							<dt><b>getHashCode</b></dt>
 				<dd>in file BaseDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_BaseDrawing.html#methodgetHashCode">PHPExcel_Worksheet_BaseDrawing::getHashCode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get hash code</dd>
 							<dt><b>getHashCode</b></dt>
+				<dd>in file HeaderFooterDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooterDrawing.html#methodgetHashCode">PHPExcel_Worksheet_HeaderFooterDrawing::getHashCode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get hash code</dd>
+							<dt><b>getHashCode</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetHashCode">PHPExcel_Worksheet::getHashCode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get hash code</dd>
+							<dt><b>getHashCode</b></dt>
+				<dd>in file MemoryDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_MemoryDrawing.html#methodgetHashCode">PHPExcel_Worksheet_MemoryDrawing::getHashCode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get hash code</dd>
 							<dt><b>getHeader</b></dt>
 				<dd>in file PageMargins.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_PageMargins.html#methodgetHeader">PHPExcel_Worksheet_PageMargins::getHeader()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Header</dd>
 							<dt><b>getHeaderFooter</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetHeaderFooter">PHPExcel_Worksheet::getHeaderFooter()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get page header/footer</dd>
 							<dt><b>getHeight</b></dt>
-				<dd>in file HeaderFooterDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooterDrawing.html#methodgetHeight">PHPExcel_Worksheet_HeaderFooterDrawing::getHeight()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Height</dd>
-							<dt><b>getHeight</b></dt>
 				<dd>in file BaseDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_BaseDrawing.html#methodgetHeight">PHPExcel_Worksheet_BaseDrawing::getHeight()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Height</dd>
+							<dt><b>getHeight</b></dt>
+				<dd>in file HeaderFooterDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooterDrawing.html#methodgetHeight">PHPExcel_Worksheet_HeaderFooterDrawing::getHeight()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Height</dd>
 							<dt><b>getHighestColumn</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetHighestColumn">PHPExcel_Worksheet::getHighestColumn()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get highest worksheet column</dd>
+							<dt><b>getHighestDataColumn</b></dt>
+				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetHighestDataColumn">PHPExcel_Worksheet::getHighestDataColumn()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get highest worksheet column that contains data</dd>
+							<dt><b>getHighestDataRow</b></dt>
+				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetHighestDataRow">PHPExcel_Worksheet::getHighestDataRow()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get highest worksheet row that contains data</dd>
 							<dt><b>getHighestRow</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetHighestRow">PHPExcel_Worksheet::getHighestRow()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get highest worksheet row</dd>
+							<dt><b>getHighestRowAndColumn</b></dt>
+				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetHighestRowAndColumn">PHPExcel_Worksheet::getHighestRowAndColumn()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get highest worksheet column and highest row that have cell records</dd>
 							<dt><b>getHorizontalCentered</b></dt>
 				<dd>in file PageSetup.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_PageSetup.html#methodgetHorizontalCentered">PHPExcel_Worksheet_PageSetup::getHorizontalCentered()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get center page horizontally</dd>
 							<dt><b>getHyperlink</b></dt>
@@ -499,9 +523,9 @@
 							<dt><b>getOddHeader</b></dt>
 				<dd>in file HeaderFooter.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooter.html#methodgetOddHeader">PHPExcel_Worksheet_HeaderFooter::getOddHeader()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get OddHeader</dd>
 							<dt><b>getOffsetX</b></dt>
-				<dd>in file HeaderFooterDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooterDrawing.html#methodgetOffsetX">PHPExcel_Worksheet_HeaderFooterDrawing::getOffsetX()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get OffsetX</dd>
-							<dt><b>getOffsetX</b></dt>
 				<dd>in file BaseDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_BaseDrawing.html#methodgetOffsetX">PHPExcel_Worksheet_BaseDrawing::getOffsetX()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get OffsetX</dd>
+							<dt><b>getOffsetX</b></dt>
+				<dd>in file HeaderFooterDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooterDrawing.html#methodgetOffsetX">PHPExcel_Worksheet_HeaderFooterDrawing::getOffsetX()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get OffsetX</dd>
 							<dt><b>getOffsetY</b></dt>
 				<dd>in file HeaderFooterDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooterDrawing.html#methodgetOffsetY">PHPExcel_Worksheet_HeaderFooterDrawing::getOffsetY()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get OffsetY</dd>
 							<dt><b>getOffsetY</b></dt>
@@ -509,9 +533,9 @@
 							<dt><b>getOrientation</b></dt>
 				<dd>in file PageSetup.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_PageSetup.html#methodgetOrientation">PHPExcel_Worksheet_PageSetup::getOrientation()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Orientation</dd>
 							<dt><b>getOutlineLevel</b></dt>
-				<dd>in file ColumnDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_ColumnDimension.html#methodgetOutlineLevel">PHPExcel_Worksheet_ColumnDimension::getOutlineLevel()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Outline Level</dd>
-							<dt><b>getOutlineLevel</b></dt>
 				<dd>in file RowDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowDimension.html#methodgetOutlineLevel">PHPExcel_Worksheet_RowDimension::getOutlineLevel()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Outline Level</dd>
+							<dt><b>getOutlineLevel</b></dt>
+				<dd>in file ColumnDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_ColumnDimension.html#methodgetOutlineLevel">PHPExcel_Worksheet_ColumnDimension::getOutlineLevel()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Outline Level</dd>
 							<dt><b>getPageMargins</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetPageMargins">PHPExcel_Worksheet::getPageMargins()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get page margins</dd>
 							<dt><b>getPageSetup</b></dt>
@@ -553,9 +577,9 @@
 							<dt><b>getRowHeight</b></dt>
 				<dd>in file RowDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowDimension.html#methodgetRowHeight">PHPExcel_Worksheet_RowDimension::getRowHeight()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Row Height</dd>
 							<dt><b>getRowIndex</b></dt>
-				<dd>in file Row.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_Row.html#methodgetRowIndex">PHPExcel_Worksheet_Row::getRowIndex()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get row index</dd>
-							<dt><b>getRowIndex</b></dt>
 				<dd>in file RowDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowDimension.html#methodgetRowIndex">PHPExcel_Worksheet_RowDimension::getRowIndex()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Row Index</dd>
+							<dt><b>getRowIndex</b></dt>
+				<dd>in file Row.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_Row.html#methodgetRowIndex">PHPExcel_Worksheet_Row::getRowIndex()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get row index</dd>
 							<dt><b>getRowIterator</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodgetRowIterator">PHPExcel_Worksheet::getRowIterator()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get row iterator</dd>
 							<dt><b>getRowsToRepeatAtTop</b></dt>
@@ -607,21 +631,21 @@
 							<dt><b>getVerticalCentered</b></dt>
 				<dd>in file PageSetup.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_PageSetup.html#methodgetVerticalCentered">PHPExcel_Worksheet_PageSetup::getVerticalCentered()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get center page vertically</dd>
 							<dt><b>getVisible</b></dt>
-				<dd>in file RowDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowDimension.html#methodgetVisible">PHPExcel_Worksheet_RowDimension::getVisible()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Visible</dd>
-							<dt><b>getVisible</b></dt>
 				<dd>in file ColumnDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_ColumnDimension.html#methodgetVisible">PHPExcel_Worksheet_ColumnDimension::getVisible()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Visible</dd>
+							<dt><b>getVisible</b></dt>
+				<dd>in file RowDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowDimension.html#methodgetVisible">PHPExcel_Worksheet_RowDimension::getVisible()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Visible</dd>
 							<dt><b>getWidth</b></dt>
 				<dd>in file BaseDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_BaseDrawing.html#methodgetWidth">PHPExcel_Worksheet_BaseDrawing::getWidth()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Width</dd>
 							<dt><b>getWidth</b></dt>
-				<dd>in file HeaderFooterDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooterDrawing.html#methodgetWidth">PHPExcel_Worksheet_HeaderFooterDrawing::getWidth()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Width</dd>
-							<dt><b>getWidth</b></dt>
 				<dd>in file ColumnDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_ColumnDimension.html#methodgetWidth">PHPExcel_Worksheet_ColumnDimension::getWidth()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Width</dd>
+							<dt><b>getWidth</b></dt>
+				<dd>in file HeaderFooterDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooterDrawing.html#methodgetWidth">PHPExcel_Worksheet_HeaderFooterDrawing::getWidth()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Width</dd>
 							<dt><b>getWorksheet</b></dt>
 				<dd>in file BaseDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_BaseDrawing.html#methodgetWorksheet">PHPExcel_Worksheet_BaseDrawing::getWorksheet()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Worksheet</dd>
 							<dt><b>getXfIndex</b></dt>
-				<dd>in file ColumnDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_ColumnDimension.html#methodgetXfIndex">PHPExcel_Worksheet_ColumnDimension::getXfIndex()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get index to cellXf</dd>
-							<dt><b>getXfIndex</b></dt>
 				<dd>in file RowDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowDimension.html#methodgetXfIndex">PHPExcel_Worksheet_RowDimension::getXfIndex()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get index to cellXf</dd>
+							<dt><b>getXfIndex</b></dt>
+				<dd>in file ColumnDimension.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_ColumnDimension.html#methodgetXfIndex">PHPExcel_Worksheet_ColumnDimension::getXfIndex()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get index to cellXf</dd>
 							<dt><b>getZoomScale</b></dt>
 				<dd>in file SheetView.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_SheetView.html#methodgetZoomScale">PHPExcel_Worksheet_SheetView::getZoomScale()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get ZoomScale</dd>
 							<dt><b>getZoomScaleNormal</b></dt>
@@ -685,7 +709,7 @@
 		<h2>k</h2>
 		<dl>
 							<dt><b>key</b></dt>
-				<dd>in file RowIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html#methodkey">PHPExcel_Worksheet_RowIterator::key()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Current key</dd>
+				<dd>in file RowIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html#methodkey">PHPExcel_Worksheet_RowIterator::key()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return the current iterator key</dd>
 							<dt><b>key</b></dt>
 				<dd>in file CellIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_CellIterator.html#methodkey">PHPExcel_Worksheet_CellIterator::key()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Current key</dd>
 					</dl>
@@ -721,7 +745,7 @@
 							<dt><b>namedRangeToArray</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodnamedRangeToArray">PHPExcel_Worksheet::namedRangeToArray()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Create array from a range of cells</dd>
 							<dt><b>next</b></dt>
-				<dd>in file RowIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html#methodnext">PHPExcel_Worksheet_RowIterator::next()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Next value</dd>
+				<dd>in file RowIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html#methodnext">PHPExcel_Worksheet_RowIterator::next()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set the iterator to its next value</dd>
 							<dt><b>next</b></dt>
 				<dd>in file CellIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_CellIterator.html#methodnext">PHPExcel_Worksheet_CellIterator::next()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Next value</dd>
 					</dl>
@@ -912,6 +936,8 @@
 				<dd>in file RowIterator.php, class <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html">PHPExcel_Worksheet_RowIterator</a><br>&nbsp;&nbsp;&nbsp;&nbsp;PHPExcel_Worksheet_RowIterator</dd>
 							<dt><b>PHPExcel_Worksheet_SheetView</b></dt>
 				<dd>in file SheetView.php, class <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_SheetView.html">PHPExcel_Worksheet_SheetView</a><br>&nbsp;&nbsp;&nbsp;&nbsp;PHPExcel_Worksheet_SheetView</dd>
+							<dt><b>prev</b></dt>
+				<dd>in file RowIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html#methodprev">PHPExcel_Worksheet_RowIterator::prev()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set the iterator to its previous value</dd>
 							<dt><b>protectCells</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodprotectCells">PHPExcel_Worksheet::protectCells()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set protection on a cell range</dd>
 							<dt><b>protectCellsByColumnAndRow</b></dt>
@@ -960,12 +986,14 @@
 				<dd>in file MemoryDrawing.php, class constant <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_MemoryDrawing.html#constRENDERING_PNG">PHPExcel_Worksheet_MemoryDrawing::RENDERING_PNG</a></dd>
 							<dt><b>resetFirstPageNumber</b></dt>
 				<dd>in file PageSetup.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_PageSetup.html#methodresetFirstPageNumber">PHPExcel_Worksheet_PageSetup::resetFirstPageNumber()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Reset first page number</dd>
+							<dt><b>resetStart</b></dt>
+				<dd>in file RowIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html#methodresetStart">PHPExcel_Worksheet_RowIterator::resetStart()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;(Re)Set the start row and the current row pointer</dd>
 							<dt><b>resetTabColor</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodresetTabColor">PHPExcel_Worksheet::resetTabColor()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Reset tab color</dd>
 							<dt><b>rewind</b></dt>
-				<dd>in file RowIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html#methodrewind">PHPExcel_Worksheet_RowIterator::rewind()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Rewind iterator</dd>
-							<dt><b>rewind</b></dt>
 				<dd>in file CellIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_CellIterator.html#methodrewind">PHPExcel_Worksheet_CellIterator::rewind()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Rewind iterator</dd>
+							<dt><b>rewind</b></dt>
+				<dd>in file RowIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html#methodrewind">PHPExcel_Worksheet_RowIterator::rewind()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Rewind the iterator to the starting row</dd>
 					</dl>
 	</div>
 	<a href="elementindex_PHPExcel_Worksheet.html#top">top</a><br>
@@ -976,12 +1004,14 @@
 		<dl>
 							<dt><b>SheetView.php</b></dt>
 				<dd>procedural page <a href="PHPExcel_Worksheet/_PHPExcel---Worksheet---SheetView.php.html">SheetView.php</a></dd>
+							<dt><b>seek</b></dt>
+				<dd>in file RowIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html#methodseek">PHPExcel_Worksheet_RowIterator::seek()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set the row pointer to the selected row</dd>
 							<dt><b>setAlignWithMargins</b></dt>
 				<dd>in file HeaderFooter.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooter.html#methodsetAlignWithMargins">PHPExcel_Worksheet_HeaderFooter::setAlignWithMargins()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set AlignWithMargins</dd>
 							<dt><b>setAutoFilter</b></dt>
-				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodsetAutoFilter">PHPExcel_Worksheet::setAutoFilter()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Autofilter Range</dd>
-							<dt><b>setAutoFilter</b></dt>
 				<dd>in file Protection.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_Protection.html#methodsetAutoFilter">PHPExcel_Worksheet_Protection::setAutoFilter()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set AutoFilter</dd>
+							<dt><b>setAutoFilter</b></dt>
+				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodsetAutoFilter">PHPExcel_Worksheet::setAutoFilter()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Autofilter Range</dd>
 							<dt><b>setAutoFilterByColumnAndRow</b></dt>
 				<dd>in file Worksheet.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet.html#methodsetAutoFilterByColumnAndRow">PHPExcel_Worksheet::setAutoFilterByColumnAndRow()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Autofilter Range by using numeric cell coordinates</dd>
 							<dt><b>setAutoSize</b></dt>
@@ -1077,7 +1107,7 @@
 							<dt><b>setInsertRows</b></dt>
 				<dd>in file Protection.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_Protection.html#methodsetInsertRows">PHPExcel_Worksheet_Protection::setInsertRows()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set InsertRows</dd>
 							<dt><b>setIterateOnlyExistingCells</b></dt>
-				<dd>in file CellIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_CellIterator.html#methodsetIterateOnlyExistingCells">PHPExcel_Worksheet_CellIterator::setIterateOnlyExistingCells()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set loop only existing cells</dd>
+				<dd>in file CellIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_CellIterator.html#methodsetIterateOnlyExistingCells">PHPExcel_Worksheet_CellIterator::setIterateOnlyExistingCells()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set the iterator to loop only existing cells</dd>
 							<dt><b>setLeft</b></dt>
 				<dd>in file PageMargins.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_PageMargins.html#methodsetLeft">PHPExcel_Worksheet_PageMargins::setLeft()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Left</dd>
 							<dt><b>setMergeCells</b></dt>
@@ -1095,9 +1125,9 @@
 							<dt><b>setOddHeader</b></dt>
 				<dd>in file HeaderFooter.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooter.html#methodsetOddHeader">PHPExcel_Worksheet_HeaderFooter::setOddHeader()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set OddHeader</dd>
 							<dt><b>setOffsetX</b></dt>
-				<dd>in file BaseDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_BaseDrawing.html#methodsetOffsetX">PHPExcel_Worksheet_BaseDrawing::setOffsetX()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set OffsetX</dd>
-							<dt><b>setOffsetX</b></dt>
 				<dd>in file HeaderFooterDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooterDrawing.html#methodsetOffsetX">PHPExcel_Worksheet_HeaderFooterDrawing::setOffsetX()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set OffsetX</dd>
+							<dt><b>setOffsetX</b></dt>
+				<dd>in file BaseDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_BaseDrawing.html#methodsetOffsetX">PHPExcel_Worksheet_BaseDrawing::setOffsetX()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set OffsetX</dd>
 							<dt><b>setOffsetY</b></dt>
 				<dd>in file BaseDrawing.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_BaseDrawing.html#methodsetOffsetY">PHPExcel_Worksheet_BaseDrawing::setOffsetY()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set OffsetY</dd>
 							<dt><b>setOffsetY</b></dt>
@@ -1265,9 +1295,9 @@
 		<h2>v</h2>
 		<dl>
 							<dt><b>valid</b></dt>
-				<dd>in file RowIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html#methodvalid">PHPExcel_Worksheet_RowIterator::valid()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;More PHPExcel_Worksheet_Row instances available?</dd>
+				<dd>in file RowIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html#methodvalid">PHPExcel_Worksheet_RowIterator::valid()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Indicate if more rows exist in the worksheet</dd>
 							<dt><b>valid</b></dt>
-				<dd>in file CellIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_CellIterator.html#methodvalid">PHPExcel_Worksheet_CellIterator::valid()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;More PHPExcel_Cell instances available?</dd>
+				<dd>in file CellIterator.php, method <a href="PHPExcel_Worksheet/PHPExcel_Worksheet_CellIterator.html#methodvalid">PHPExcel_Worksheet_CellIterator::valid()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Are there any more PHPExcel_Cell instances available?</dd>
 					</dl>
 	</div>
 	<a href="elementindex_PHPExcel_Worksheet.html#top">top</a><br>
@@ -1283,7 +1313,7 @@
 	<a href="elementindex_PHPExcel_Worksheet.html#top">top</a><br>
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 27 Feb 2011 16:26:38 -0800 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sat, 19 May 2012 14:16:31 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.4</a>
 	      </div>
       </td></tr></table>
     </td>
