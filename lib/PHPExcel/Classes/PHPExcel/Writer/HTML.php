@@ -686,7 +686,7 @@ class PHPExcel_Writer_HTML implements PHPExcel_Writer_IWriter {
 			// col elements, loop through columnDimensions and set width
 			foreach ($sheet->getColumnDimensions() as $columnDimension) {
 				if (($width = PHPExcel_Shared_Drawing::cellDimensionToPixels($columnDimension->getWidth(), $this->_defaultFont)) >= 0) {
-					$width = PHPExcel_Shared_Drawing::pixelsToPoints($width);
+					$width = PHPExcel_Shared_Drawing::pixelsToPoints($width) * 1.2;
 					$column = PHPExcel_Cell::columnIndexFromString($columnDimension->getColumnIndex()) - 1;
 					$this->_columnWidths[$sheetIndex][$column] = $width;
 					$css['table.sheet' . $sheetIndex . ' col.col' . $column]['width'] = $width . 'pt';
@@ -1134,8 +1134,19 @@ class PHPExcel_Writer_HTML implements PHPExcel_Writer_IWriter {
 								$cssClass['height'] = $height;
 							}
 							//** end of redundant code **
-
-							$html .= ' style="' . $this->_assembleCSS($cssClass) . '"';
+                            if($cellData && $cellData != "." ) {
+                                $null = "1px solid #000000";
+                            }else{
+                                $null = "1px hidden #000000";
+                            }
+                            $borders = [
+                                "border-bottom" => $null,
+                                "border-top"    => $null,
+                                "border-left"   => $null,
+                                "border-right"  => $null
+                            ];
+                            $cssClass = array_merge($borders,$cssClass);
+                            $html .= ' style="' . $this->_assembleCSS($cssClass) . '"';
 						}
 						if ($colSpan > 1) {
 							$html .= ' colspan="' . $colSpan . '"';
