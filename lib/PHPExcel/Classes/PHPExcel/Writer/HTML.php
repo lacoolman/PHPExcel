@@ -683,11 +683,26 @@ class PHPExcel_Writer_HTML implements PHPExcel_Writer_IWriter {
 				$css['table.sheet' . $sheetIndex . ' col.col' . $column]['width'] = '42pt';
 			}
 
+            /* dirty hack to calculate width of print page by xeraks */
+            $sumWidth = 0;
+            $pageKoef = 0;
+
+            foreach ($sheet->getColumnDimensions() as $columnDimension) {
+                if (($width = PHPExcel_Shared_Drawing::cellDimensionToPixels($columnDimension->getWidth(), $this->_defaultFont)) >= 0) {
+                    $sumWidth += PHPExcel_Shared_Drawing::pixelsToPoints($width);
+                }
+            }
+            $sumWidth  = $sumWidth;
+            $pageKoef = 765/$sumWidth;
+            /* dirty hack end */
+
 			// col elements, loop through columnDimensions and set width
 			foreach ($sheet->getColumnDimensions() as $columnDimension) {
 				if (($width = PHPExcel_Shared_Drawing::cellDimensionToPixels($columnDimension->getWidth(), $this->_defaultFont)) >= 0) {
-					$width = PHPExcel_Shared_Drawing::pixelsToPoints($width) * 1.2;
-					$column = PHPExcel_Cell::columnIndexFromString($columnDimension->getColumnIndex()) - 1;
+
+                    $width = PHPExcel_Shared_Drawing::pixelsToPoints($width) * $pageKoef;
+
+                    $column = PHPExcel_Cell::columnIndexFromString($columnDimension->getColumnIndex()) - 1;
 					$this->_columnWidths[$sheetIndex][$column] = $width;
 					$css['table.sheet' . $sheetIndex . ' col.col' . $column]['width'] = $width . 'pt';
 
